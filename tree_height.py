@@ -12,7 +12,9 @@ def compute_height(n, parents):
             tree[parents[i]].append(i)
 
     def height(node):
-        if not tree[node]:
+        if node == -1:
+            return 0
+        elif not tree[node]:
             return 1
         else:
             return 1 + max([height(child) for child in tree[node]])
