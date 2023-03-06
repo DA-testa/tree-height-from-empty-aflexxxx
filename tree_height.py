@@ -16,8 +16,8 @@ def compute_height(n, parents):
 def main():
     # implement input form keyboard and from files
     # Accept int input for user input
-    node_coubt = int(input)
-    root_value = int(input)
+    n = int(input)
+    parents = int(input)
     max_height = compute_height(n, parents)
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
