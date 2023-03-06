@@ -16,26 +16,16 @@ def compute_height(n, parents):
 def main():
     # implement input form keyboard and from files
     # Accept int input for user input
-    int_input = int(input)
-    
-    # Accept string input for user input to call for files etc
-    #string_input = input
-    
-    # Check the data types of input
-    #if type(string_input) == str:
-        #print(string_input)
-    
-    if type(int_input) == int:
-        n = int(input)
-        parents = int(input)
-        print(max_height)
+    node_coubt = int(input)
+    root_value = int(input)
+    max_height = compute_height(n, parents)
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
-    with open("./directory/filename", mode="r"): as fails:
-            text = fails.read() 
-    print(text)
+    #with open("./directory/filename", mode="r"): as fails:
+            #text = fails.read() 
+    #print(text)
     # input number of elements
-    
+    print(max_height)
     # input values in one variable, separate with space, split these values in an array
     # call the function and output it's result
 
