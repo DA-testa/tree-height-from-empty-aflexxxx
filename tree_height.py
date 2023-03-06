@@ -1,11 +1,3 @@
-# python3
-
-import sys
-import threading
-
-
-# python3
-
 import sys
 import threading
 
@@ -30,19 +22,11 @@ def compute_height(n, parents):
 
 def main():
     # take input from the user
-    mode = input
-    while mode not in ['F', 'I']:
-        print("Invalid input!")
-        mode = input
-
+    mode = input()
     if mode == 'F':
         # read input from file
-        file_name = input
-        while 'a' in file_name:
-            file_name = input
-        with open(f'folder/{file_name}', 'r') as f:
-            n = int(f.readline())
-            parents = list(map(int, f.readline().split()))
+        n = int(input())
+        parents = list(map(int, input().split()))
     else:
         # read input from keyboard
         n = int(input())
@@ -52,6 +36,9 @@ def main():
     print(compute_height(n, parents))
 
 
-sys.setrecursionlimit(10**7) 
-threading.stack_size(2**27)   
+# In Python, the default limit on recursion depth is rather low,
+# so raise it here for this problem. Note that to take advantage
+# of bigger stack, we have to launch the computation in a new thread.
+sys.setrecursionlimit(10**7)  # max depth of recursion
+threading.stack_size(2**27)   # new thread will get stack of such size
 threading.Thread(target=main).start()
