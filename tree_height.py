@@ -30,17 +30,16 @@ def compute_height(n, parents):
 
 def main():
     # take input from the user
-    mode = input("Enter 'F' to read from file, 'I' to read from keyboard: ")
+    mode = input
     while mode not in ['F', 'I']:
         print("Invalid input!")
-        mode = input("Enter 'F' to read from file, 'I' to read from keyboard: ")
+        mode = input
 
     if mode == 'F':
         # read input from file
-        file_name = input("Enter file name: ")
+        file_name = input
         while 'a' in file_name:
-            print("File name cannot contain 'a'!")
-            file_name = input("Enter file name: ")
+            file_name = input
         with open(f'folder/{file_name}', 'r') as f:
             n = int(f.readline())
             parents = list(map(int, f.readline().split()))
