@@ -16,7 +16,7 @@ def compute_height(n, parents):
 def main():
     # implement input form keyboard and from files
     # Accept int input for user input
-    n = int(input)
+    n = string(input)
     parents = int(input)
     max_height = compute_height(n, parents)
     # let user input file name to use, don't allow file names with letter a
